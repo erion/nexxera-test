@@ -1,0 +1,22 @@
+<h1>Filiais</h1>
+<a routerLink='/filial'>Inserir nova filial</a>
+<table>
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Ativo</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let filial of filiais">
+            <td>{{filial.id}}</td>
+            <td>{{filial.nome}}</td>
+            <td>{{filial.ativo}}</td>
+            <td><a routerLink="/filial/{{filial.id}}">Editar</a></td>
+            <td>Inativar</td>
+        </tr>
+    </tbody>
+</table>
